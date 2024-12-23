@@ -1,0 +1,352 @@
+<!-- about.html -->
+<section class="sos-about">
+    <div class="container">
+        <div class="sos-section-tag mx-auto mb-4 justify-content-center" style="width: fit-content;">Qui sommes-nous</div>
+        
+        <div class="row align-items-center">
+            <!-- Text Content -->
+            <div class="col-lg-6">
+                <div class="sos-about-content">
+                    <h2 class="h3 text-center">Une aide humanitaire directe pour l'Ukraine</h2>
+                    
+                    <div class="sos-about-text">
+                        <p class="lead mb-4">
+                            Association basée à Montpellier, nous organisons des missions humanitaires directes vers l'Ukraine, assurant que chaque don atteint ceux qui en ont le plus besoin.
+                        </p>
+                        
+                        <div class="sos-about-features">
+                            <div class="sos-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Contact permanent avec notre association sœur en Ukraine</span>
+                            </div>
+                            <div class="sos-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Coordination avec les autorités locales et militaires</span>
+                            </div>
+                            <div class="sos-feature">
+                                <i class="bi bi-check-circle-fill"></i>
+                                <span>Collecte et distribution de matériel médical</span>
+                            </div>
+                        </div>
+
+                        <div class="expand-content mt-4">
+                            <div class="collapse" id="readMoreContent">
+                                <p>Nous récupérons tous types de dons : vêtements chauds, matériel médical, mobilier, électroménager, et produits de première nécessité. Notre réseau de partenaires médicaux nous permet de collecter et d'acheminer des équipements médicaux essentiels.</p>
+                                <p>Chaque mission est soigneusement planifiée et exécutée par nos bénévoles dévoués, garantissant que l'aide atteint directement les populations dans le besoin.</p>
+                            </div>
+                            <button class="btn btn-outline-secondary btn-sm d-flex align-items-center mx-auto mt-3" type="button" data-bs-toggle="collapse" data-bs-target="#readMoreContent" aria-expanded="false">
+                                <i class="bi bi-chevron-down"></i>
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="sos-about-actions mt-4">
+                        <a href="/get-involved" class="btn btn-primary me-3">
+                            Nous rejoindre                        </a>
+                        <a href="/blog" class="btn btn-secondary">
+                            Nos actions
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Visual Content -->
+            <div class="col-lg-6">
+                <div class="sos-about-media d-none d-lg-block">
+                    <div class="sos-media-grid">
+                        <img src="https://placehold.co/600x400" alt="SOS Ukraine Mission" class="img-fluid main-image rounded-4">
+                        <img src="https://placehold.co/300x200" alt="Humanitarian Aid" class="img-fluid secondary-image rounded-3">
+                        
+                        <!-- Interactive Info Cards -->
+                        <div class="sos-info-cards">
+                            <button class="sos-info-card" data-bs-toggle="modal" data-bs-target="#medicalModal">
+                                <i class="bi bi-heart-pulse"></i>
+                                <span>Aide Médicale</span>
+                            </button>
+                            <button class="sos-info-card" data-bs-toggle="modal" data-bs-target="#networkModal">
+                                <i class="bi bi-people"></i>
+                                <span>Notre Réseau</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile-optimized media section -->
+                <div class="sos-about-media-mobile d-lg-none">
+                    <picture>
+                        <source media="(max-width: 576px)" srcset="https://placehold.co/400x250">
+                        <source media="(max-width: 768px)" srcset="https://placehold.co/600x350">
+                        <img src="https://placehold.co/800x400" alt="SOS Ukraine Mission" class="img-fluid rounded-4 mb-4">
+                    </picture>
+                    <div class="sos-mobile-cards">
+                        <button class="sos-mobile-card" data-bs-toggle="modal" data-bs-target="#medicalModal">
+                            <i class="bi bi-heart-pulse"></i>
+                            <span>Aide Médicale</span>
+                        </button>
+                        <button class="sos-mobile-card" data-bs-toggle="modal" data-bs-target="#networkModal">
+                            <i class="bi bi-people"></i>
+                            <span>Notre Réseau</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modals -->
+    <div class="modal fade" id="medicalModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Aide Médicale</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Notre réseau inclut plus de 15 partenaires médicaux qui nous permettent de fournir:</p>
+                    <ul class="modal-list">
+                        <li>Matériel médical professionnel</li>
+                        <li>Médicaments et fournitures de première nécessité</li>
+                        <li>Équipements spécialisés pour les hôpitaux</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="networkModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title">Notre Réseau</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Un réseau solide de partenaires et bénévoles:</p>
+                    <ul class="modal-list">
+                        <li>100+ bénévoles actifs</li>
+                        <li>Coordination avec 20+ villes en Ukraine</li>
+                        <li>Partenariats avec des ONG locales</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- about.css -->
+<style>
+.sos-about {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.sos-section-tag {
+    padding: 0.5rem 1.5rem;
+    background-color: rgba(0, 91, 187, 0.1);
+    color: #005BBB;
+    font-weight: 500;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.875rem;
+}
+
+.sos-section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    margin-bottom: 2rem;
+    line-height: 1.2;
+}
+
+.sos-feature {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 1rem;
+}
+
+.sos-feature i {
+    color: #005BBB;
+    font-size: 1.25rem;
+    margin-right: 1rem;
+    margin-top: 0.25rem;
+}
+
+.expand-content .btn {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    border-radius: 50%;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.expand-content .btn[aria-expanded="true"] i {
+    transform: rotate(180deg);
+}
+
+.expand-content .btn i {
+    transition: transform 0.3s ease;
+}
+
+/* Media section styles */
+.sos-about-media {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.sos-media-grid {
+    position: relative;
+}
+
+.main-image {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+.secondary-image {
+    position: absolute;
+    bottom: -2rem;
+    left: -2rem;
+    width: 50%;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Info Cards */
+.sos-info-cards {
+    position: absolute;
+    top: 2rem;
+    right: -2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.sos-info-card {
+    background: white;
+    border: none;
+    padding: 1.5rem;
+    border-radius: 1rem;
+    text-align: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.sos-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.sos-info-card i {
+    font-size: 2rem;
+    color: #005BBB;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.sos-info-card span {
+    display: block;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+/* Mobile Cards */
+.sos-mobile-cards {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.sos-mobile-card {
+    flex: 1;
+    background: white;
+    border: 1px solid #dee2e6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.sos-mobile-card i {
+    font-size: 1.5rem;
+    color: #005BBB;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.sos-mobile-card span {
+    font-size: 0.9rem;
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+/* Modal Styling */
+.modal-content {
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+.modal-header {
+    padding: 1.5rem 1.5rem 0.5rem;
+}
+
+.modal-title {
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.modal-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0 0;
+}
+
+.modal-list li {
+    padding: 0.5rem 0;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.modal-list li::before {
+    content: "•";
+    color: #005BBB;
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+@media (max-width: 991.98px) {
+    .sos-about {
+        padding: 60px 0;
+    }
+
+    .sos-section-title {
+        text-align: center;
+        font-size: 2rem;
+    }
+    
+    .lead {
+        text-align: center;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .sos-about {
+        padding: 40px 0;
+    }
+
+    .sos-about-actions {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sos-about-actions .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+</style>

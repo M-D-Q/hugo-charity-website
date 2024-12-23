@@ -1,0 +1,236 @@
+<!-- layouts/partials/blog-preview.html -->
+<section class="blog-preview py-5">
+    <div class="container-lg">
+
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 text-center">
+                <div class="sos-section-tag mx-auto mb-4 justify-content-center" style="width: fit-content;">Nos Actualités</div>
+                <h2 class="h3">Dernières Missions, Actions et Communications</h2>
+            </div>
+        </div>
+
+
+        <!-- Swiper -->
+        <div class="swiper blog-swiper">
+            <div class="swiper-wrapper">
+                {{ range first 6 (where .Site.RegularPages "Section" "posts") }}
+                <div class="swiper-slide">
+                    <article class="card h-100 border-0 shadow-sm">
+                        <!-- Category Badge -->
+                        {{ with .Params.category }}
+                        <div class="category-badge">
+                            <span class="badge text-bg-{{ . }}">{{ . }}</span>
+                        </div>
+                        {{ end }}
+                        
+                        <!-- Featured Image -->
+                        {{ with .Params.image }}
+                        <div class="card-img-wrapper">
+                            {{ if hasPrefix . "http" }}
+                            <!-- External image (like placehold.co) -->
+                            <picture>
+                                <source media="(min-width: 992px)" srcset="{{ . }}">
+                                <source media="(min-width: 768px)" srcset="{{ replace . "800x600" "600x400" }}">
+                                <img src="{{ replace . "800x600" "400x300" }}" 
+                                     class="card-img-top"
+                                     alt="{{ $.Title }}"
+                                     loading="lazy">
+                            </picture>
+                            {{ else }}
+                            <!-- Local image to be processed by Hugo -->
+                            {{ $image := resources.Get . }}
+                            {{ $small := $image.Resize "400x" }}
+                            {{ $medium := $image.Resize "600x" }}
+                            {{ $large := $image.Resize "800x" }}
+                            <picture>
+                                <source media="(min-width: 992px)" srcset="{{ $large.RelPermalink }}">
+                                <source media="(min-width: 768px)" srcset="{{ $medium.RelPermalink }}">
+                                <img src="{{ $small.RelPermalink }}" 
+                                     class="card-img-top"
+                                     alt="{{ $.Title }}"
+                                     loading="lazy">
+                            </picture>
+                            {{ end }}
+                        </div>
+                        {{ end }}
+
+                        <div class="card-body p-4">
+                            <!-- Mission Number & Date -->
+                            <div class="d-flex align-items-center mb-3">
+                                {{ with .Params.mission_number }}
+                                <span class="badge bg-primary-subtle text-primary me-2">Mission #{{ . }}</span>
+                                {{ end }}
+                                <small class="text-body-secondary">
+                                    {{ .Date.Format "02 Jan 2006" }}
+                                </small>
+                            </div>
+
+                            <!-- Title -->
+                            <h3 class="card-title h5 fw-bold mb-3">
+                                <a href="{{ .RelPermalink }}" class="text-decoration-none text-body">
+                                    {{ .Title }}
+                                </a>
+                            </h3>
+
+                            <!-- Excerpt -->
+                            <p class="card-text small mb-3">
+                                {{ .Summary | truncate 120 }}
+                            </p>
+
+                            <!-- Tags -->
+                            {{ with .Params.tags }}
+                            <div class="tags mb-3">
+                                {{ range . }}
+                                <span class="badge text-bg-light me-1">{{ . }}</span>
+                                {{ end }}
+                            </div>
+                            {{ end }}
+
+                            <!-- Read More Link -->
+                            <a href="{{ .RelPermalink }}" class="btn btn-link text-primary p-0">
+                                Lire la suite
+                                <i class="bi bi-arrow-right ms-2"></i>
+                            </a>
+                        </div>
+                    </article>
+                </div>
+                {{ end }}
+            </div>
+            <!-- Navigation and Pagination Container -->
+            <div class="blog-swiper-controls d-flex align-items-center justify-content-center mt-4">
+                <div class="blog-swiper-button-prev btn btn-primary btn-sm rounded-circle"><</div>
+                <div class="blog-swiper-pagination"></div>
+                <div class="blog-swiper-button-next btn btn-primary btn-sm rounded-circle">></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+/* Styles remain the same as before */
+.blog-preview {
+    background-color: #fff;
+}
+
+
+.card-img-wrapper {
+    position: relative;
+    padding-top: 66.67%; /* 3:2 aspect ratio */
+    overflow: hidden;
+}
+
+.card-img-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.category-badge {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1;
+}
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card:hover .card-img-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Custom colors for category badges */
+.badge.text-bg-medical { background-color: #FF6B6B !important; }
+.badge.text-bg-food { background-color: #4ECDC4 !important; }
+.badge.text-bg-clothing { background-color: #45B7D1 !important; }
+.badge.text-bg-urgent { background-color: #FF4646 !important; }
+
+.blog-swiper {
+    padding: 2rem 0;  /* Remove side padding */
+    position: relative;
+}
+
+/* Controls Container */
+.blog-swiper-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+/* Navigation Buttons */
+.blog-swiper-button-next,
+.blog-swiper-button-prev {
+    position: static;  /* Override Swiper's absolute positioning */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* Pagination */
+.blog-swiper-pagination {
+    position: static !important;  /* Override Swiper's absolute positioning */
+    width: auto !important;  /* Override Swiper's default width */
+}
+
+.blog-swiper-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 6px;
+    background-color: #dee2e6;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.blog-swiper-pagination .swiper-pagination-bullet-active {
+    background-color: #005BBB;
+    transform: scale(1.2);
+}
+
+
+</style>
+
+<!-- Initialize Swiper -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        new Swiper('.blog-swiper', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            autoplay: {
+                delay: 5000,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: '.blog-swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.blog-swiper-button-next',
+                prevEl: '.blog-swiper-button-prev',
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2,
+                },
+                1024: {
+                    slidesPerView: 3,
+                }
+            }
+        });
+    });
+    </script>

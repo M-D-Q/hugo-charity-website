@@ -1,0 +1,172 @@
+<!-- partners.html -->
+<section class="sos-partners py-5">
+    <div class="container-lg">
+        <!-- Section Header -->
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 text-center">
+                <div class="sos-section-tag mx-auto mb-4 justify-content-center" style="width: fit-content;">Nos Partenaires</div>
+                <h2 class="h3">Ils nous font confiance</h2>
+            </div>
+        </div>
+
+        <!-- Partners Swiper -->
+        <div class="swiper partners-swiper">
+            <div class="swiper-wrapper">
+                <!-- Partner logos -->
+                <div class="swiper-slide">
+                    <div class="partner-card">
+                        <img src="https://placehold.co/200x100/f8f9fa/005BBB?text=Oc-santé" 
+                             alt="Oc-santé"
+                             class="img-fluid partner-logo">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="partner-card">
+                        <img src="https://placehold.co/200x100/f8f9fa/005BBB?text=Clinipôle" 
+                             alt="Clinipôle"
+                             class="img-fluid partner-logo">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="partner-card">
+                        <img src="https://placehold.co/200x100/f8f9fa/005BBB?text=CHU+Lapeyronie" 
+                             alt="CHU Lapeyronie"
+                             class="img-fluid partner-logo">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="partner-card">
+                        <img src="https://placehold.co/200x100/f8f9fa/005BBB?text=CH+Béziers" 
+                             alt="CH Béziers"
+                             class="img-fluid partner-logo">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="partner-card">
+                        <img src="https://placehold.co/200x100/f8f9fa/005BBB?text=Adages" 
+                             alt="Adages"
+                             class="img-fluid partner-logo">
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="partner-card">
+                        <img src="https://placehold.co/200x100/f8f9fa/005BBB?text=Korian" 
+                             alt="Korian"
+                             class="img-fluid partner-logo">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Controls -->
+            <div class="partners-swiper-controls d-flex align-items-center justify-content-center mt-4">
+                <div class="partners-swiper-button-prev btn btn-primary btn-sm rounded-circle"><</div>
+                <div class="partners-swiper-pagination"></div>
+                <div class="partners-swiper-button-next btn btn-primary btn-sm rounded-circle">></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.sos-partners {
+    background-color: #fff;
+}
+
+.partners-swiper {
+    padding: 2rem 0;
+}
+
+.partner-card {
+    padding: 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+}
+
+.partner-card:hover {
+    transform: translateY(-5px);
+}
+
+.partner-logo {
+    max-width: 200px;
+    filter: grayscale(100%);
+    opacity: 0.7;
+    transition: all 0.3s ease;
+}
+
+.partner-card:hover .partner-logo {
+    filter: grayscale(0%);
+    opacity: 1;
+}
+
+/* Swiper Controls */
+.partners-swiper-controls {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    width: 100%;
+}
+
+.partners-swiper-button-next,
+.partners-swiper-button-prev {
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.partners-swiper-pagination {
+    position: static !important;
+    width: auto !important;
+}
+
+.partners-swiper-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 6px;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.partners-swiper-pagination .swiper-pagination-bullet-active {
+    transform: scale(1.2);
+}
+</style>
+
+<!-- Initialize Swiper -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.partners-swiper', {
+        slidesPerView: 2,
+        spaceBetween: 30,
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.partners-swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.partners-swiper-button-next',
+            prevEl: '.partners-swiper-button-prev',
+        },
+        breakpoints: {
+            640: {
+                slidesPerView: 3,
+            },
+            992: {
+                slidesPerView: 4,
+            },
+            1200: {
+                slidesPerView: 5,
+            }
+        }
+    });
+});
+</script>

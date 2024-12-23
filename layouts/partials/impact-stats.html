@@ -1,0 +1,258 @@
+<!-- impact-stats.html -->
+<section class="sos-stats">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 col-md-10 text-center">
+                <div class="sos-section-tag mx-auto mb-4 justify-content-center" style="width: fit-content;">Nos réalisations</div> 
+                <h2 class="h3">Notre impact en chiffres</h2>
+            </div>
+        </div>
+        
+        <!-- Swiper container -->
+        <div class="swiper stats-swiper">
+            <div class="swiper-wrapper">
+                <!-- Individual stat slides -->
+                <div class="swiper-slide">
+                    <div class="sos-stat-card">
+                        <div class="sos-stat-icon">
+                            <i class="bi bi-truck"></i>
+                        </div>
+                        <div class="sos-stat-number" data-value="32">32+</div>
+                        <div class="sos-stat-label">Missions accomplies</div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="sos-stat-card">
+                        <div class="sos-stat-icon">
+                            <i class="bi bi-box-seam"></i>
+                        </div>
+                        <div class="sos-stat-number">12</div>
+                        <div class="sos-stat-label">Tonnes d'aide distribuées</div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="sos-stat-card">
+                        <div class="sos-stat-icon">
+                            <i class="bi bi-people"></i>
+                        </div>
+                        <div class="sos-stat-number" data-value="100">100+</div>
+                        <div class="sos-stat-label">Bénévoles engagés</div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="sos-stat-card">
+                        <div class="sos-stat-icon">
+                            <i class="bi bi-heart-pulse"></i>
+                        </div>
+                        <div class="sos-stat-number">15+</div>
+                        <div class="sos-stat-label">Partenaires médicaux</div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="sos-stat-card">
+                        <div class="sos-stat-icon">
+                            <i class="bi bi-bag-heart"></i>
+                        </div>
+                        <div class="sos-stat-number">5000+</div>
+                        <div class="sos-stat-label">Articles donnés</div>
+                    </div>
+                </div>
+                
+                <div class="swiper-slide">
+                    <div class="sos-stat-card">
+                        <div class="sos-stat-icon">
+                            <i class="bi bi-building"></i>
+                        </div>
+                        <div class="sos-stat-number">20+</div>
+                        <div class="sos-stat-label">Villes desservies</div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Pagination -->
+            <div class="swiper-pagination stats-pagination"></div>
+        </div>
+    </div>
+</section>
+
+<!-- impact-stats.css -->
+<style>
+.sos-stats {
+    padding: 80px 10px 0;
+    background-color: #ffffff;
+}
+
+.container {
+    max-width: 1140px;
+}
+
+
+
+
+.stats-swiper {
+    padding: 1rem 0 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.sos-stat-card {
+    padding: 2rem;
+    text-align: center;
+    background-color: #ffffff;
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.sos-stat-icon {
+    margin-bottom: 1.5rem;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sos-stat-icon i {
+    font-size: 2.5rem;
+    color: #005BBB;
+    padding: 1rem;
+    background-color: rgba(0, 91, 187, 0.1);
+    border-radius: 20px;
+}
+
+.sos-stat-number {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #005BBB;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+.sos-stat-label {
+    font-size: 1.125rem;
+    color: #4a4a4a;
+    font-weight: 500;
+}
+
+/* Swiper customization */
+.stats-pagination {
+    bottom: 0 !important;
+}
+
+.stats-pagination .swiper-pagination-bullet {
+    width: 8px;
+    height: 8px;
+    margin: 0 6px;
+}
+
+.stats-pagination .swiper-pagination-bullet-active {
+    background: #005BBB;
+}
+
+@media (max-width: 1199.98px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (max-width: 991.98px) {
+    .sos-stats {
+        padding: 60px 0;
+    }
+    
+    .container {
+        max-width: 720px;
+    }
+    
+    .sos-stat-number {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    .sos-section-title {
+        font-size: 2rem;
+        margin-bottom: 3rem;
+    }
+    
+    .sos-stat-card {
+        padding: 1.5rem;
+    }
+    
+    .sos-stat-icon {
+        height: 60px;
+    }
+    
+    .sos-stat-icon i {
+        font-size: 2rem;
+        padding: 0.75rem;
+    }
+    
+    .sos-stat-number {
+        font-size: 2rem;
+    }
+    
+    .sos-stat-label {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .container {
+        padding: 0 1rem;
+    }
+    
+    .sos-stats {
+        padding: 40px 0;
+    }
+    
+    .stats-swiper {
+        padding: 0 0 2rem;
+    }
+}
+</style>
+
+<!-- Initialize Swiper -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('.stats-swiper', {
+        slidesPerView: 1,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+            delay: 2000,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.stats-pagination',
+            clickable: true,
+        },
+        breakpoints: {
+            // Mobile first approach
+            320: {
+                slidesPerView: 1,
+                spaceBetween: 20
+            },
+            576: {
+                slidesPerView: 2,
+                spaceBetween: 20
+            },
+            768: {
+                slidesPerView: 2,
+                spaceBetween: 30
+            },
+            992: {
+                slidesPerView: 3,
+                spaceBetween: 30
+            }
+        }
+    });
+});
+</script>

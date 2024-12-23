@@ -1,0 +1,135 @@
+
+:root {
+    --bs-primary: #005BBB;
+    --bs-primary-rgb: 0, 91, 187;
+    --ukrainian-yellow: rgba(255, 215, 0, 0.8); /* Subtle yellow */
+  }
+  
+  .btn-primary {
+      --bs-btn-bg: #005BBB;
+      --bs-btn-border-color: #005BBB;
+      --bs-btn-hover-bg: #004799;
+      --bs-btn-hover-border-color: #004799;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+  }
+  
+  .btn-primary:not(.blog-swiper-button-next):not(.blog-swiper-button-prev):not(.partners-swiper-button-next):not(.partners-swiper-button-prev)::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -100%;
+      width: 50px;
+      height: 200%;
+      background-color: var(--ukrainian-yellow);
+      transition: all 1s ease;
+      z-index: 2;
+  }
+  
+  .btn-primary:not(.blog-swiper-button-next):not(.blog-swiper-button-prev):not(.partners-swiper-button-next):not(.partners-swiper-button-prev):hover::after {
+      left: 200%;
+  }
+
+
+/* Secondary button (Yellow with blue effect) */
+.btn-secondary {
+    --bs-btn-color: #005BBB;
+    --bs-btn-bg: #FFD700;
+    --bs-btn-border-color: #FFD700;
+    --bs-btn-hover-bg: #ffd900;
+    --bs-btn-hover-color: #005BBB;
+
+    --bs-btn-hover-border-color: #FFD700;
+    --bs-btn-active-bg: #CCA900;
+    --bs-btn-active-border-color: #CCA900;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-secondary:not(.btn-involvement):after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -100%;
+    width: 50px;
+    height: 200%;
+    background-color: var(--bs-primary);
+    transition: all 1s ease;
+    z-index: 2;
+}
+
+.btn-secondary:hover::after {
+    left: 200%;
+}
+
+
+.sos-header {
+    background-color: #ffffff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.sos-logo {
+    height: 40px;
+    width: auto;
+}
+
+.sos-brand-text {
+    font-weight: 600;
+    color: #005BBB; /* Ukrainian flag blue */
+    margin-left: 10px;
+}
+
+.navbar-nav .nav-link {
+    color: #333333;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #005BBB;
+}
+
+.sos-donate-btn {
+    background-color: #005BBB;
+    border-color: #005BBB;
+    padding: 0.5rem 1.5rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.sos-donate-btn:hover {
+    background-color: #004799;
+    border-color: #004799;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 991.98px) {
+    .navbar-nav {
+        padding-top: 1rem;
+    }
+    
+    .nav-item {
+        margin-bottom: 0.5rem;
+    }
+    
+    .sos-donate-btn {
+        display: inline-block;
+        margin-top: 0.5rem;
+    }
+}
+
+
+.sos-section-tag {
+    padding: 0.5rem 1.5rem;
+    margin-bottom: 1.5rem;
+    background-color: rgba(0, 91, 187, 0.1);
+    color: #005BBB;
+    font-weight: 500;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 0.875rem;
+}

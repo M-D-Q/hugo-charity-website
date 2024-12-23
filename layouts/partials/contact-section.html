@@ -1,0 +1,242 @@
+<!-- contact-section.html -->
+<section class="sos-contact py-5">
+    <div class="container-lg">
+        <!-- Section Header -->
+        <div class="row justify-content-center mb-5">
+            <div class="col-lg-8 col-md-10 text-center">
+                <div class="sos-section-tag mx-auto mb-4 justify-content-center" style="width: fit-content;">Contact</div>
+                <h2 class="h3 mb-2">Contactez-nous</h2>
+                <p class="text-secondary">Besoin d'informations ? Nous sommes là pour vous aider.</p>
+            </div>
+        </div>
+
+        <div class="row g-4">
+            <!-- Contact Methods -->
+            <div class="col-lg-4">
+                <div class="card border-0 shadow-sm h-100">
+                    <div class="card-body p-4">
+                        <h3 class="h5 mb-4">Nos coordonnées</h3>
+
+                        <!-- Email -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded-circle me-3">
+                                    <i class="bi bi-envelope text-primary"></i>
+                                </div>
+                                <h4 class="h6 mb-0">Email</h4>
+                            </div>
+                            <p class="mb-0 ms-5 ps-2">
+                                <a href="mailto:donsmtpuk@gmail.com" class="text-body text-decoration-none">
+                                    donsmtpuk@gmail.com
+                                </a>
+                            </p>
+                        </div>
+
+                        <!-- Phone -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded-circle me-3">
+                                    <i class="bi bi-telephone text-primary"></i>
+                                </div>
+                                <h4 class="h6 mb-0">Téléphone</h4>
+                            </div>
+                            <div class="ms-5 ps-2">
+                                <p class="mb-1">
+                                    <a href="tel:+33621589712" class="text-body text-decoration-none">
+                                        06 21 58 97 12
+                                    </a>
+                                </p>
+                                <p class="mb-0">
+                                    <a href="tel:+33467509027" class="text-body text-decoration-none">
+                                        04 67 50 90 27
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Address -->
+                        <div class="mb-4">
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded-circle me-3">
+                                    <i class="bi bi-geo-alt text-primary"></i>
+                                </div>
+                                <h4 class="h6 mb-0">Points de collecte</h4>
+                            </div>
+                            <div class="ms-5 ps-2">
+                                <p class="mb-1">123 Avenue de la Solidarité,<br>34000 Montpellier</p>
+                                <small class="text-secondary">Permanence tous les jours<br>de 9h à 18h</small>
+                            </div>
+                        </div>
+
+                        <!-- Social -->
+                        <div>
+                            <div class="d-flex align-items-center mb-2">
+                                <div class="bg-primary bg-opacity-10 p-2 rounded-circle me-3">
+                                    <i class="bi bi-share text-primary"></i>
+                                </div>
+                                <h4 class="h6 mb-0">Réseaux sociaux</h4>
+                            </div>
+                            <div class="ms-5 ps-2">
+                                <div class="d-flex gap-2">
+                                    <a href="https://www.facebook.com/sosmtpukr/" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer" 
+                                       class="btn btn-outline-primary btn-sm rounded-circle">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                                    <a href="#" 
+                                       target="_blank" 
+                                       rel="noopener noreferrer" 
+                                       class="btn btn-outline-primary btn-sm rounded-circle">
+                                        <i class="bi bi-youtube"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4">
+                        <h3 class="h5 mb-4">Envoyez-nous un message</h3>
+
+                        <form>
+                            <div class="row g-3">
+                                <!-- Name -->
+                                <div class="col-md-6">
+                                    <label for="name" class="form-label">Nom complet</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+
+                                <!-- Email -->
+                                <div class="col-md-6">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" required>
+                                </div>
+
+                                <!-- Subject -->
+                                <div class="col-12">
+                                    <label for="subject" class="form-label">Sujet</label>
+                                    <select class="form-select" id="subject" required>
+                                        <option value="">Choisissez un sujet...</option>
+                                        <option value="donation">Question sur les dons</option>
+                                        <option value="volunteer">Devenir bénévole</option>
+                                        <option value="partnership">Proposition de partenariat</option>
+                                        <option value="other">Autre demande</option>
+                                    </select>
+                                </div>
+
+                                <!-- Message -->
+                                <div class="col-12">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                </div>
+
+                                <!-- Submit Button -->
+                                <div class="col-12">
+                                    <div class="d-flex justify-content-end">
+                                        <button type="submit" class="btn btn-primary btn-effect px-4">
+                                            Envoyer le message
+                                            <i class="bi bi-send ms-2"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Map Section -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm overflow-hidden">
+                    <div class="card-body p-0" style="height: 400px;">
+                        <!-- Replace src with actual Google Maps embed URL -->
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2888.6279494794574!2d3.8766!3d43.6108!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNDPCsDM2JzM5LjAiTiAzwrA1MicxNS44IkU!5e0!3m2!1sfr!2sfr!4v1640000000000!5m2!1sfr!2sfr" 
+                            width="100%" 
+                            height="100%" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Partner Organizations -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="h5 mb-4">Nos associations partenaires</h3>
+                <div class="row g-4">
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h4 class="h6">Alliance Occitanie Ukraine</h4>
+                                <p class="small mb-2">Perpignan</p>
+                                <a href="mailto:alliance.occitanie.ukraine@orange.fr" class="text-decoration-none small text-body">
+                                    alliance.occitanie.ukraine@orange.fr
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h4 class="h6">Association Narbonne Ukraine</h4>
+                                <p class="small mb-2">Narbonne</p>
+                                <a href="mailto:narbonne.ukraine@gmail.com" class="text-decoration-none small text-body">
+                                    narbonne.ukraine@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="card border-0 shadow-sm h-100">
+                            <div class="card-body p-4">
+                                <h4 class="h6">AFUCA</h4>
+                                <p class="small mb-2">Nice</p>
+                                <a href="mailto:contact.afuca@gmail.com" class="text-decoration-none small text-body">
+                                    contact.afuca@gmail.com
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+.sos-contact .btn-outline-primary {
+    width: 38px;
+    height: 38px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sos-contact a:not(.btn):hover {
+    color: var(--bs-primary) !important;
+}
+
+.sos-contact .form-control:focus,
+.sos-contact .form-select:focus {
+    border-color: var(--bs-primary);
+    box-shadow: 0 0 0 0.25rem rgba(0, 91, 187, 0.25);
+}
+
+@media (max-width: 767.98px) {
+    .sos-contact .social-links {
+        justify-content: center;
+    }
+}
+</style>
