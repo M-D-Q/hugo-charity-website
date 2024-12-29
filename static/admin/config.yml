@@ -9,22 +9,15 @@ backend:
     uploadMedia: 'Upload "{{path}}"'
     deleteMedia: 'Delete "{{path}}"'
 
-# These lines should match your site setup
 site_url: https://sos-montpellier-ukraine.netlify.app
 display_url: https://sos-montpellier-ukraine.netlify.app
 logo_url: /images/logo.jpg
 
-# Media and public folders
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
-
-# Editorial workflow
 publish_mode: editorial_workflow
-
-# Locale
 locale: 'fr'
 
-# Collections
 collections:
   - name: "posts"
     label: "Articles"
@@ -33,10 +26,10 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     preview_path: "posts/{{year}}/{{month}}/{{slug}}"
     fields:
-      - {label: "Titre", name: "title", widget: "string"}
-      - {label: "Date de publication", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", date_format: "DD/MM/YYYY", time_format: "HH:mm"}
+      - {label: "Titre", name: "title", widget: "string", hint: "Le titre de votre article"}
+      - {label: "Date de publication", name: "date", widget: "datetime", hint: "Date et heure de publication"}
       - {label: "Brouillon", name: "draft", widget: "boolean", default: false}
-      - {label: "Image principale", name: "image", widget: "image", allow_multiple: false}
+      - {label: "Image principale", name: "image", widget: "image", hint: "L'image principale de votre article"}
       - {
           label: "Catégorie", 
           name: "category", 
@@ -49,40 +42,51 @@ collections:
             {label: "Actualité", value: "news"},
             {label: "Événement", value: "event"},
             {label: "Partenariat", value: "partnership"}
-          ]
+          ],
+          hint: "Sélectionnez une catégorie"
         }
       - {
           label: "Tags", 
           name: "tags", 
           widget: "list", 
           allow_add: true, 
-          default: ["actualité"]
+          default: ["actualité"],
+          hint: "Ajoutez des tags pour mieux organiser vos articles"
         }
       - {
           label: "Numéro de mission", 
           name: "mission_number", 
           widget: "number", 
           required: false, 
-          value_type: "int"
+          hint: "Optionnel - Le numéro de la mission si applicable"
         }
-      - {label: "Lieu", name: "location", widget: "string", required: false}
-      - {label: "Date de l'événement", name: "event_date", widget: "string", required: false}
+      - {
+          label: "Lieu", 
+          name: "location", 
+          widget: "string", 
+          required: false, 
+          hint: "Optionnel - Le lieu concerné par l'article"
+        }
+      - {
+          label: "Date de l'événement", 
+          name: "event_date", 
+          widget: "string", 
+          required: false, 
+          hint: "Optionnel - La date de l'événement si différente de la date de publication"
+        }
       - label: "Alerte"
         name: "alert"
         widget: "object"
         required: false
+        hint: "Optionnel - Ajoutez une alerte en haut de l'article"
         fields:
-          - {
-              label: "Type", 
-              name: "type", 
-              widget: "select", 
-              options: ["success", "info", "warning"]
-            }
+          - {label: "Type", name: "type", widget: "select", options: ["success", "info", "warning"]}
           - {label: "Message", name: "message", widget: "text"}
       - label: "Appel à l'action"
         name: "cta"
         widget: "object"
         required: false
+        hint: "Optionnel - Ajoutez un appel à l'action"
         fields:
           - {label: "Titre", name: "title", widget: "string"}
           - {label: "Description", name: "description", widget: "text"}
@@ -92,6 +96,7 @@ collections:
           label: "Contenu", 
           name: "body", 
           widget: "markdown", 
+          hint: "Le contenu principal de votre article",
           buttons: [
             "bold", 
             "italic", 
