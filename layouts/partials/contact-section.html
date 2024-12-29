@@ -103,6 +103,7 @@
                     <div class="card-body p-4">
                         <h3 class="h5 mb-4">Envoyez-nous un message</h3>
 
+
                         <form action="https://formsubmit.co/f3b8082c61e58285dee71ef35a796703" method="POST" enctype="multipart/form-data">
                             <!-- Spam Protection -->
                             <input type="text" name="_honey" style="display:none">
@@ -270,3 +271,9 @@
     display: none;
 }
 </style>
+
+<script>
+    document.getElementById('email').addEventListener('input', function(e) {
+        document.querySelector('input[name="Email"]').value = e.target.value;
+    });
+    </script>
