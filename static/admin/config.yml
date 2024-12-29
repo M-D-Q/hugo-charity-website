@@ -80,18 +80,49 @@ collections:
         required: false
         hint: "Optionnel - Ajoutez une alerte en haut de l'article"
         fields:
-          - {label: "Type", name: "type", widget: "select", options: ["success", "info", "warning"]}
-          - {label: "Message", name: "message", widget: "text"}
+          - {
+              label: "Type", 
+              name: "type", 
+              widget: "select", 
+              options: ["success", "info", "warning"],
+              required: false
+            }
+          - {
+              label: "Message", 
+              name: "message", 
+              widget: "text",
+              required: false
+            }
       - label: "Appel à l'action"
         name: "cta"
         widget: "object"
         required: false
         hint: "Optionnel - Ajoutez un appel à l'action"
         fields:
-          - {label: "Titre", name: "title", widget: "string"}
-          - {label: "Description", name: "description", widget: "text"}
-          - {label: "URL", name: "url", widget: "string"}
-          - {label: "Texte du bouton", name: "button_text", widget: "string"}
+          - {
+              label: "Titre", 
+              name: "title", 
+              widget: "string",
+              required: false
+            }
+          - {
+              label: "Description", 
+              name: "description", 
+              widget: "text",
+              required: false
+            }
+          - {
+              label: "URL", 
+              name: "url", 
+              widget: "string",
+              required: false
+            }
+          - {
+              label: "Texte du bouton", 
+              name: "button_text", 
+              widget: "string",
+              required: false
+            }
       - {
           label: "Contenu", 
           name: "body", 
