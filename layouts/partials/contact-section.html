@@ -103,16 +103,21 @@
                     <div class="card-body p-4">
                         <h3 class="h5 mb-4">Envoyez-nous un message</h3>
 
-                        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-                            <!-- Hidden honeypot field to prevent spam -->
-                            <p class="hidden">
-                                <label>
-                                    Don't fill this out if you're human: <input name="bot-field" />
-                                </label>
-                            </p>
+                        <form action="https://formsubmit.co/oursvif@gmail.com" method="POST" enctype="multipart/form-data">
+                            <!-- Spam Protection -->
+                            <input type="text" name="_honey" style="display:none">
                             
-                            <!-- Form name for Netlify -->
-                            <input type="hidden" name="form-name" value="contact" />
+                            <!-- Form Customization -->
+                            <input type="hidden" name="_subject" value="Nouveau message SOS Montpellier Ukraine">
+                            <input type="hidden" name="_template" value="table">
+                            <input type="hidden" name="_next" value="/merci">
+                            <!-- Enable captcha (recommended) by default -->
+                            
+                            <!-- Common spam words blacklist -->
+                            <input type="hidden" name="_blacklist" value="viagra,bitcoin,crypto,casino,porn">
+                            
+                            <!-- Enable auto-response -->
+                            <input type="hidden" name="_autoresponse" value="Merci pour votre message. Nous vous répondrons dans les plus brefs délais. - L'équipe SOS Montpellier Ukraine">
                             
                             <div class="row g-3">
                                 <!-- Name -->
@@ -121,10 +126,10 @@
                                     <input type="text" class="form-control" name="name" id="name" required>
                                 </div>
                         
-                                <!-- Email -->
+                                <!-- Email (using _replyto for direct reply capability) -->
                                 <div class="col-md-6">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" name="email" id="email" required>
+                                    <input type="email" class="form-control" name="_replyto" id="email" required>
                                 </div>
                         
                                 <!-- Subject -->
@@ -143,6 +148,13 @@
                                 <div class="col-12">
                                     <label for="message" class="form-label">Message</label>
                                     <textarea class="form-control" name="message" id="message" rows="5" required></textarea>
+                                </div>
+                        
+                                <!-- File Upload (optional) -->
+                                <div class="col-12">
+                                    <label for="attachment" class="form-label">Pièce jointe (optionnel)</label>
+                                    <input type="file" class="form-control" name="attachment" id="attachment" accept="image/png, image/jpeg, application/pdf">
+                                    <div class="form-text">Max 5MB. Formats acceptés: PNG, JPEG, PDF</div>
                                 </div>
                         
                                 <!-- Submit Button -->
