@@ -1,11 +1,13 @@
-baseURL = '/'
-languageCode = 'fr-FR'
-title = 'Montpellier-Ukraine'
+# Basic site settings
+baseURL = "/"
+title = "SOS Montpellier Ukraine"
 
+# Language settings
+defaultContentLanguage = "fr"
+defaultContentLanguageInSubdir = false
+languageCode = "fr-fr"
 
-# Existing settings remain...
-
-# Make sure taxonomies are enabled for tags and categories
+# Taxonomies
 [taxonomies]
   category = "categories"
   tag = "tags"
@@ -31,10 +33,11 @@ title = 'Montpellier-Ukraine'
   taxonomy = ["HTML", "RSS"]
   term = ["HTML", "RSS"]
 
-# Language settings (since your site is in French)
+# Language configuration
 [languages]
   [languages.fr]
     languageName = "Français"
     weight = 1
+    title = "SOS Montpellier Ukraine"
     [languages.fr.params]
       description = "Association humanitaire SOS Montpellier Ukraine"
