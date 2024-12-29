@@ -18,9 +18,6 @@ public_folder: "/images/uploads"
 publish_mode: editorial_workflow
 locale: 'fr'
 
-# Specify TOML format
-format: "toml"
-delimiter: "+++"
 
 collections:
   - name: "posts"
@@ -29,6 +26,9 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     preview_path: "posts/{{year}}/{{month}}/{{slug}}"
+    format: "toml-frontmatter"
+    extension: "md"
+    frontmatter_delimiter: "+++"
     fields:
       - {label: "Titre", name: "title", widget: "string", hint: "Le titre de votre article"}
       - {label: "Date de publication", name: "date", widget: "datetime", hint: "Date et heure de publication"}

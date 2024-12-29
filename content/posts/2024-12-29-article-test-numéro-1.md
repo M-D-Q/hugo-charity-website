@@ -2,8 +2,8 @@
 title: Article test numéro 1
 date: 2024-12-29T03:15:00.000Z
 draft: false
-image: /images/uploads/screenshot-2024-12-18-223312.png
-category: food
+image: "/images/uploads/screenshot-2024-12-18-223312.png"
+category: "food"
 tags:
   - actualité
 cta:
