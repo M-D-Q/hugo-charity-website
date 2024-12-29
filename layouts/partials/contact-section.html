@@ -103,24 +103,34 @@
                     <div class="card-body p-4">
                         <h3 class="h5 mb-4">Envoyez-nous un message</h3>
 
-                        <form>
+                        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+                            <!-- Hidden honeypot field to prevent spam -->
+                            <p class="hidden">
+                                <label>
+                                    Don't fill this out if you're human: <input name="bot-field" />
+                                </label>
+                            </p>
+                            
+                            <!-- Form name for Netlify -->
+                            <input type="hidden" name="form-name" value="contact" />
+                            
                             <div class="row g-3">
                                 <!-- Name -->
                                 <div class="col-md-6">
                                     <label for="name" class="form-label">Nom complet</label>
-                                    <input type="text" class="form-control" id="name" required>
+                                    <input type="text" class="form-control" name="name" id="name" required>
                                 </div>
-
+                        
                                 <!-- Email -->
                                 <div class="col-md-6">
                                     <label for="email" class="form-label">Email</label>
-                                    <input type="email" class="form-control" id="email" required>
+                                    <input type="email" class="form-control" name="email" id="email" required>
                                 </div>
-
+                        
                                 <!-- Subject -->
                                 <div class="col-12">
                                     <label for="subject" class="form-label">Sujet</label>
-                                    <select class="form-select" id="subject" required>
+                                    <select class="form-select" name="subject" id="subject" required>
                                         <option value="">Choisissez un sujet...</option>
                                         <option value="donation">Question sur les dons</option>
                                         <option value="volunteer">Devenir bénévole</option>
@@ -128,13 +138,13 @@
                                         <option value="other">Autre demande</option>
                                     </select>
                                 </div>
-
+                        
                                 <!-- Message -->
                                 <div class="col-12">
                                     <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" id="message" rows="5" required></textarea>
+                                    <textarea class="form-control" name="message" id="message" rows="5" required></textarea>
                                 </div>
-
+                        
                                 <!-- Submit Button -->
                                 <div class="col-12">
                                     <div class="d-flex justify-content-end">
@@ -146,6 +156,7 @@
                                 </div>
                             </div>
                         </form>
+                        
                     </div>
                 </div>
             </div>
@@ -238,5 +249,9 @@
     .sos-contact .social-links {
         justify-content: center;
     }
+}
+
+.hidden {
+    display: none;
 }
 </style>
