@@ -108,53 +108,56 @@
                             <input type="text" name="_honey" style="display:none">
                             
                             <!-- Form Customization -->
-                            <input type="hidden" name="_subject" value="Nouveau message SOS Montpellier Ukraine">
                             <input type="hidden" name="_template" value="table">
-                            <input type="hidden" name="_next" value="/merci">
-                            <!-- Enable captcha (recommended) by default -->
-                            
-                            <!-- Common spam words blacklist -->
-                            <input type="hidden" name="_blacklist" value="viagra,bitcoin,crypto,casino,porn">
-                            
-                            <!-- Enable auto-response -->
-                            <input type="hidden" name="_autoresponse" value="Merci pour votre message. Nous vous répondrons dans les plus brefs délais. - L'équipe SOS Montpellier Ukraine">
+                            <input type="hidden" name="_subject" value="Nouveau contact - SOS Montpellier Ukraine">
+                            <input type="hidden" name="_next" value="https://sos-montpellier-ukraine.netlify.app/merci">
                             
                             <div class="row g-3">
                                 <!-- Name -->
                                 <div class="col-md-6">
                                     <label for="name" class="form-label">Nom complet</label>
-                                    <input type="text" class="form-control" name="name" id="name" required>
+                                    <input type="text" class="form-control" name="Nom" id="name" required>
                                 </div>
                         
-                                <!-- Email (using _replyto for direct reply capability) -->
+                                <!-- Email -->
                                 <div class="col-md-6">
                                     <label for="email" class="form-label">Email</label>
                                     <input type="email" class="form-control" name="_replyto" id="email" required>
+                                    <!-- Also store email in a regular field for the table -->
+                                    <input type="hidden" name="Email" value="">
+                                </div>
+                        
+                                <!-- Phone (Optional) -->
+                                <div class="col-md-6">
+                                    <label for="phone" class="form-label">Téléphone (optionnel)</label>
+                                    <input type="tel" class="form-control" name="Téléphone" id="phone">
                                 </div>
                         
                                 <!-- Subject -->
                                 <div class="col-12">
                                     <label for="subject" class="form-label">Sujet</label>
-                                    <select class="form-select" name="subject" id="subject" required>
+                                    <select class="form-select" name="Type de demande" id="subject" required>
                                         <option value="">Choisissez un sujet...</option>
-                                        <option value="donation">Question sur les dons</option>
-                                        <option value="volunteer">Devenir bénévole</option>
-                                        <option value="partnership">Proposition de partenariat</option>
-                                        <option value="other">Autre demande</option>
+                                        <option value="Don matériel">Don matériel</option>
+                                        <option value="Don financier">Don financier</option>
+                                        <option value="Devenir bénévole">Devenir bénévole</option>
+                                        <option value="Partenariat">Proposition de partenariat</option>
+                                        <option value="Autre demande">Autre demande</option>
                                     </select>
                                 </div>
                         
                                 <!-- Message -->
                                 <div class="col-12">
                                     <label for="message" class="form-label">Message</label>
-                                    <textarea class="form-control" name="message" id="message" rows="5" required></textarea>
+                                    <textarea class="form-control" name="Message" id="message" rows="5" required></textarea>
                                 </div>
                         
-                                <!-- File Upload (optional) -->
+                                <!-- File Upload -->
                                 <div class="col-12">
                                     <label for="attachment" class="form-label">Pièce jointe (optionnel)</label>
-                                    <input type="file" class="form-control" name="attachment" id="attachment" accept="image/png, image/jpeg, application/pdf">
-                                    <div class="form-text">Max 5MB. Formats acceptés: PNG, JPEG, PDF</div>
+                                    <input type="file" class="form-control" name="attachment" id="attachment" 
+                                           accept="image/png, image/jpeg, application/pdf">
+                                    <div class="form-text">Maximum 5MB. Formats acceptés: PNG, JPEG, PDF</div>
                                 </div>
                         
                                 <!-- Submit Button -->
