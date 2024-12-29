@@ -6,8 +6,8 @@
         <div class="row align-items-center">
             <!-- Text Content -->
             <div class="col-lg-6">
-                <div class="sos-about-content">
-                    <h2 class="h3 text-center">Une aide humanitaire directe pour l'Ukraine</h2>
+                <div class="sos-about-content text-center text-lg-start">
+                    <h2 class="h3 mb-4">Une aide humanitaire directe pour l'Ukraine</h2>
                     
                     <div class="sos-about-text">
                         <p class="lead mb-4">
@@ -40,12 +40,15 @@
                         </div>
                     </div>
                     
-                    <div class="sos-about-actions mt-4">
-                        <a href="/get-involved" class="btn btn-primary me-3">
-                            Nous rejoindre                        </a>
-                        <a href="/blog" class="btn btn-secondary">
-                            Nos actions
-                        </a>
+                    <div class="sos-about-actions-wrapper">
+                        <div class="sos-about-actions">
+                            <a href="/get-involved" class="btn btn-primary">
+                                Nous rejoindre
+                            </a>
+                            <a href="/blog" class="btn btn-secondary">
+                                Nos actions
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -133,7 +136,6 @@
     </div>
 </section>
 
-<!-- about.css -->
 <style>
 .sos-about {
     padding: 100px 0;
@@ -151,14 +153,6 @@
     font-size: 0.875rem;
 }
 
-.sos-section-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1a1a1a;
-    margin-bottom: 2rem;
-    line-height: 1.2;
-}
-
 .sos-feature {
     display: flex;
     align-items: flex-start;
@@ -170,8 +164,14 @@
     font-size: 1.25rem;
     margin-right: 1rem;
     margin-top: 0.25rem;
+    flex-shrink: 0;
 }
 
+.sos-feature span {
+    line-height: 1.5;
+}
+
+/* Expand content styling */
 .expand-content .btn {
     width: 32px;
     height: 32px;
@@ -187,6 +187,23 @@
 
 .expand-content .btn i {
     transition: transform 0.3s ease;
+}
+
+/* Action Buttons Styling */
+.sos-about-actions-wrapper {
+    margin: 3rem 0;
+}
+
+.sos-about-actions {
+    display: flex;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+.sos-about-actions .btn {
+    min-width: 160px;
+    max-width: 200px;
+    padding: 0.75rem 1.5rem;
 }
 
 /* Media section styles */
@@ -319,18 +336,22 @@
     font-weight: bold;
 }
 
+/* Responsive Styles */
 @media (max-width: 991.98px) {
     .sos-about {
         padding: 60px 0;
     }
-
-    .sos-section-title {
-        text-align: center;
-        font-size: 2rem;
-    }
     
-    .lead {
+    .sos-about-content {
         text-align: center;
+    }
+
+    .sos-feature {
+        justify-content: center;
+    }
+
+    .sos-about-actions-wrapper {
+        margin: 2.5rem 0;
     }
 }
 
@@ -339,14 +360,38 @@
         padding: 40px 0;
     }
 
+    .sos-about-actions-wrapper {
+        margin: 2rem 0;
+    }
+
     .sos-about-actions {
         flex-direction: column;
+        align-items: center;
         gap: 1rem;
     }
 
     .sos-about-actions .btn {
-        width: 100%;
-        justify-content: center;
+        width: auto;
+        min-width: 200px;
+        padding: 0.75rem 2rem;
+    }
+
+    .sos-about-media-mobile {
+        margin-top: 2rem;
+    }
+
+    .sos-mobile-cards {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .sos-mobile-card {
+        padding: 1.25rem;
+    }
+
+    .sos-feature {
+        text-align: left;
+        justify-content: flex-start;
     }
 }
 </style>

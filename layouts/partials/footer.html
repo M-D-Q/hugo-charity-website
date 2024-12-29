@@ -1,1 +1,100 @@
-<p>Copyright {{ now.Year }}. All rights reserved.</p>
+<!-- footer.html -->
+<footer class="footer py-5 bg-light">
+    <div class="container-lg">
+        <div class="row g-4">
+            <!-- Association Info -->
+            <div class="col-lg-4">
+                <h5 class="mb-3">SOS Montpellier Ukraine</h5>
+                <p class="text-secondary mb-3">Association humanitaire apportant une aide directe à l'Ukraine depuis Montpellier.</p>
+                <div class="d-flex gap-2">
+                    <a href="https://www.facebook.com/sosmtpukr/" class="btn btn-outline-primary btn-sm rounded-circle">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#" class="btn btn-outline-primary btn-sm rounded-circle">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Quick Links -->
+            <div class="col-lg-2 col-md-4">
+                <h6 class="mb-3">Navigation</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="/" class="text-decoration-none text-secondary">Accueil</a></li>
+                    <li class="mb-2"><a href="/about" class="text-decoration-none text-secondary">À propos</a></li>
+                    <li class="mb-2"><a href="/blog" class="text-decoration-none text-secondary">Actualités</a></li>
+                    <li class="mb-2"><a href="/contact" class="text-decoration-none text-secondary">Contact</a></li>
+                </ul>
+            </div>
+
+            <!-- Actions -->
+            <div class="col-lg-2 col-md-4">
+                <h6 class="mb-3">Actions</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><a href="/donate" class="text-decoration-none text-secondary">Faire un don</a></li>
+                    <li class="mb-2"><a href="/volunteer" class="text-decoration-none text-secondary">Bénévolat</a></li>
+                    <li class="mb-2"><a href="/partners" class="text-decoration-none text-secondary">Partenaires</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div class="col-lg-4 col-md-4">
+                <h6 class="mb-3">Contact</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2">
+                        <a href="mailto:donsmtpuk@gmail.com" class="text-decoration-none text-secondary">
+                            <i class="bi bi-envelope-fill me-2 text-primary"></i>donsmtpuk@gmail.com
+                        </a>
+                    </li>
+                    <li class="mb-2">
+                        <a href="tel:+33621589712" class="text-decoration-none text-secondary">
+                            <i class="bi bi-telephone-fill me-2 text-primary"></i>06 21 58 97 12
+                        </a>
+                    </li>
+                    <li>
+                        <i class="bi bi-geo-alt-fill me-2 text-primary"></i>
+                        <span class="text-secondary">123 Avenue de la Solidarité,<br>34000 Montpellier</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="border-top pt-3">
+                    <div class="row align-items-center">
+                        <div class="col-md-6 text-center text-md-start">
+                            <small class="text-secondary">&copy; {{now.Year}} SOS Montpellier Ukraine. Tous droits réservés.</small>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                            <small>
+                                <a href="/privacy" class="text-decoration-none text-secondary me-3">Mentions légales</a>
+                                <a href="/terms" class="text-decoration-none text-secondary">Conditions d'utilisation</a>
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<style>
+.footer {
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+
+.footer .btn-outline-primary {
+    width: 32px;
+    height: 32px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer a:not(.btn):hover {
+    color: var(--bs-primary) !important;
+}
+</style>
