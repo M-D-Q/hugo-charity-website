@@ -18,6 +18,10 @@ public_folder: "/images/uploads"
 publish_mode: editorial_workflow
 locale: 'fr'
 
+# Specify TOML format
+format: "toml"
+delimiter: "+++"
+
 collections:
   - name: "posts"
     label: "Articles"
