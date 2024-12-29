@@ -41,3 +41,6 @@ languageCode = "fr-fr"
     title = "SOS Montpellier Ukraine"
     [languages.fr.params]
       description = "Association humanitaire SOS Montpellier Ukraine"
+
+[permalinks]
+posts = "/posts/:year/:month/:title/"

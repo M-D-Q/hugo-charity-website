@@ -1,14 +1,12 @@
 <!-- layouts/partials/blog-preview.html -->
 <section class="blog-preview py-5">
     <div class="container-lg">
-
         <div class="row justify-content-center">
             <div class="col-lg-8 col-md-10 text-center">
                 <div class="sos-section-tag mx-auto mb-4 justify-content-center" style="width: fit-content;">Nos Actualités</div>
                 <h2 class="h3">Dernières Missions, Actions et Communications</h2>
             </div>
         </div>
-
 
         <!-- Swiper -->
         <div class="swiper blog-swiper">
@@ -30,26 +28,18 @@
                             <!-- External image (like placehold.co) -->
                             <picture>
                                 <source media="(min-width: 992px)" srcset="{{ . }}">
-                                <source media="(min-width: 768px)" srcset="{{ replace . "800x600" "600x400" }}">
-                                <img src="{{ replace . "800x600" "400x300" }}" 
+                                <source media="(min-width: 768px)" srcset="{{ . }}">
+                                <img src="{{ . }}" 
                                      class="card-img-top"
                                      alt="{{ $.Title }}"
                                      loading="lazy">
                             </picture>
                             {{ else }}
-                            <!-- Local image to be processed by Hugo -->
-                            {{ $image := resources.Get . }}
-                            {{ $small := $image.Resize "400x" }}
-                            {{ $medium := $image.Resize "600x" }}
-                            {{ $large := $image.Resize "800x" }}
-                            <picture>
-                                <source media="(min-width: 992px)" srcset="{{ $large.RelPermalink }}">
-                                <source media="(min-width: 768px)" srcset="{{ $medium.RelPermalink }}">
-                                <img src="{{ $small.RelPermalink }}" 
-                                     class="card-img-top"
-                                     alt="{{ $.Title }}"
-                                     loading="lazy">
-                            </picture>
+                            <!-- Local image -->
+                            <img src="{{ . }}" 
+                                 class="card-img-top"
+                                 alt="{{ $.Title }}"
+                                 loading="lazy">
                             {{ end }}
                         </div>
                         {{ end }}

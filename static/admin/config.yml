@@ -31,7 +31,15 @@ collections:
     frontmatter_delimiter: "+++"
     fields:
       - {label: "Titre", name: "title", widget: "string", hint: "Le titre de votre article"}
-      - {label: "Date de publication", name: "date", widget: "datetime", hint: "Date et heure de publication"}
+      - {
+          label: "Date de publication", 
+          name: "date", 
+          widget: "datetime",
+          format: "YYYY-MM-DDTHH:mm:00+01:00", # Fixed format for French timezone
+          date_format: "DD/MM/YYYY",
+          time_format: "HH:mm",
+          hint: "Date et heure de publication (fuseau horaire français)"
+        }
       - {label: "Brouillon", name: "draft", widget: "boolean", default: false}
       - {label: "Image principale", name: "image", widget: "image", hint: "L'image principale de votre article"}
       - {
