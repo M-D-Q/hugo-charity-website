@@ -1,52 +1,6 @@
 {{ define "main" }}
 
 
-<!-- Debug info -->
-<div style="background: #eee; padding: 20px; margin: 20px;">
-    <h4>Debug Info:</h4>
-    <p>Number of pages found: {{ len .Pages }}</p>
-    <p>Current section: {{ .Section }}</p>
-    <p>Content Type: {{ .Type }}</p>
-</div>
-
-<!-- Your regular content -->
-<section class="sos-blog-hero py-5 bg-light">
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-8">
-                <div class="sos-section-tag mx-auto mb-4">Nos Actions</div>
-                <h1 class="h2 mb-4">Nos missions en action</h1>
-                <p class="lead mb-0">Découvrez l'impact de nos missions humanitaires</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- List all pages for debugging -->
-<div style="background: #eee; padding: 20px; margin: 20px;">
-    <h4>All Pages:</h4>
-    {{ range .Pages }}
-    <div style="margin: 10px 0; padding: 10px; border: 1px solid #ccc;">
-        <p>Title: {{ .Title }}</p>
-        <p>Date: {{ .Date }}</p>
-        <p>Draft: {{ .Draft }}</p>
-        <p>Type: {{ .Type }}</p>
-        <p>Section: {{ .Section }}</p>
-        <p>File Path: {{ .File.Path }}</p>
-    </div>
-    {{ end }}
-</div>
-<section class="sos-blog-hero py-5 bg-light">
-    <div class="container">
-        <div class="row justify-content-center text-center">
-            <div class="col-lg-8">
-                <div class="sos-section-tag mx-auto mb-4">Nos Actions</div>
-                <h1 class="h2 mb-4">Nos missions en action</h1>
-                <p class="lead mb-0">Découvrez l'impact de nos missions humanitaires</p>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Featured Post Section -->
 {{ $featuredPost := index (where .Pages "Type" "posts") 0 }}
