@@ -1,0 +1,72 @@
+backend:
+  name: git-gateway
+  branch: main # Branch to update
+
+# These lines should match your site setup
+site_url: https://sos-montpellier-ukraine.netlify.app/
+display_url: https://sos-montpellier-ukraine.netlify.app/
+logo_url: /images/logo.jpg
+
+# Media and public folders
+media_folder: "static/images/uploads" # Media files will be stored here
+public_folder: "/images/uploads" # The src attribute for uploaded media
+
+# Editorial workflow
+publish_mode: editorial_workflow
+
+# Locale
+locale: 'fr'
+
+# Collections
+collections:
+  - name: "posts"
+    label: "Articles"
+    folder: "content/posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    preview_path: "posts/{{year}}/{{month}}/{{slug}}"
+    fields:
+      - {label: "Titre", name: "title", widget: "string"}
+      - {label: "Date de publication", name: "date", widget: "datetime", format: "YYYY-MM-DD HH:mm:ss", date_format: "DD/MM/YYYY", time_format: "HH:mm"}
+      - {label: "Brouillon", name: "draft", widget: "boolean", default: false}
+      - {label: "Image principale", name: "image", widget: "image", allow_multiple: false}
+      - {label: "Catégorie", name: "category", widget: "select", options: [
+          {label: "Mission médicale", value: "medical"},
+          {label: "Distribution de vêtements", value: "clothing"},
+          {label: "Aide alimentaire", value: "food"},
+          {label: "Urgence", value: "urgent"},
+          {label: "Actualité", value: "news"},
+          {label: "Événement", value: "event"},
+          {label: "Partenariat", value: "partnership"}
+        ]}
+      - {label: "Tags", name: "tags", widget: "list", allow_add: true, default: ["actualité"]}
+      - {label: "Numéro de mission", name: "mission_number", widget: "number", required: false, value_type: "int"}
+      - {label: "Lieu", name: "location", widget: "string", required: false}
+      - {label: "Date de l'événement", name: "event_date", widget: "string", required: false}
+      - label: "Alerte"
+        name: "alert"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Type", name: "type", widget: "select", options: ["success", "info", "warning"]}
+          - {label: "Message", name: "message", widget: "text"}
+      - label: "Appel à l'action"
+        name: "cta"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Titre", name: "title", widget: "string"}
+          - {label: "Description", name: "description", widget: "text"}
+          - {label: "URL", name: "url", widget: "string"}
+          - {label: "Texte du bouton", name: "button_text", widget: "string"}
+      - {label: "Contenu", name: "body", widget: "markdown", buttons: [
+          "bold", 
+          "italic", 
+          "link", 
+          "quote", 
+          "bulleted-list", 
+          "numbered-list",
+          "heading-two",
+          "heading-three"
+        ],
+        editor_components: ["image"]}

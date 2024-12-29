@@ -1,3 +1,40 @@
 baseURL = '/'
 languageCode = 'fr-FR'
 title = 'Montpellier-Ukraine'
+
+
+# Existing settings remain...
+
+# Make sure taxonomies are enabled for tags and categories
+[taxonomies]
+  category = "categories"
+  tag = "tags"
+
+# Enable goldmark for markdown rendering
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true  # Allows HTML in markdown content
+  
+# Media handling
+[imaging]
+  anchor = "Smart"
+  bgColor = "#ffffff"
+  hint = "photo"
+  quality = 85
+  resampleFilter = "Lanczos"
+
+# Output settings
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS", "JSON"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+# Language settings (since your site is in French)
+[languages]
+  [languages.fr]
+    languageName = "Français"
+    weight = 1
+    [languages.fr.params]
+      description = "Association humanitaire SOS Montpellier Ukraine"
